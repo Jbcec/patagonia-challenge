@@ -37,10 +37,14 @@ cd phrase-cards
 ```
 
 2. **Instalar dependencias**
+```bash
 npm install
+```
 
 3. **Levantar el servidor de desarrollo**
+```bash
 npm start
+```
 
 4. Abrir el navegador, el proyecto corre en  http://localhost:3000
 
