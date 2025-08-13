@@ -1,7 +1,6 @@
 # 📜 Phrase Cards Challenge
 
-Este proyecto es parte de un challenge de frontend cuyo objetivo es implementar una aplicación que muestre un conjunto de frases en formato de tarjetas (*cards*), con funcionalidad de filtrado, paginación y tests automatizados.  
-Además, la aplicación está diseñada para ser **responsive**, adaptándose a distintos tamaños de pantalla.
+Este proyecto es parte de un challenge de frontend cuyo objetivo es implementar una aplicación que muestre un conjunto de frases en formato de tarjetas (*cards*), con funcionalidad de filtrado, paginación y tests automatizados.
 
 ---
 
