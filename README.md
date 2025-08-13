@@ -15,12 +15,12 @@ Este proyecto es parte de un challenge de frontend cuyo objetivo es implementar 
 
 ## 📂 Estructura principal
 
-src/
-├── app/ # Configuración de Redux store y slices
-├── components/ # Componentes como PhraseCard, PhraseGrid, Pagination
-├── tests/ # Tests automatizados
-├── index.css # Estilos globales
-└── main.jsx # Punto de entrada
+src/<br>
+├── app/ # Configuración de Redux store y slices<br>
+├── components/ # Componentes como PhraseCard, PhraseGrid, Pagination<br>
+├── tests/ # Tests automatizados<br>
+├── index.css # Estilos globales<br>
+└── main.jsx # Punto de entrada<br>
 
 ---
 
