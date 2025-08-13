@@ -4,8 +4,10 @@ const phrasesSlice = createSlice({
   name: 'phrases',
   initialState: {
     phrases: [
-      { id: 'p-1', text: 'La práctica hace al maestro' },
-      { id: 'p-2', text: 'El enfoque lo es todo' }
+      { id: 'p-1', text: 'Si de algo soy rico es de perplejidades, y no de certezas' },
+      { id: 'p-2', text: 'Lástima no se le tiene a nadie, maestro' },
+      { id: 'p-3', text: 'Si no hay amor, nunca habrá sueños' },
+      { id: 'p-4', text: '¿Acaso existe algo más valioso que tus sueños?' },
     ],
     filter: '',
     currentPage: 1,
