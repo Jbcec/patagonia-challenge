@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+/* Reset básico y tipografía */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8; /* más suave, celeste pastel */
+  color: #3a3a3a; /* gris oscuro */
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Contenedor principal */
+.app-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgb(110 193 228 / 0.25);
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #4a6fa5; /* azul suave y acogedor */
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Formulario para agregar frase */
+.form-add-phrase {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.form-add-phrase input[type="text"] {
+  flex-grow: 1;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: 2px solid #c4dbee;
+  border-radius: 10px;
+  transition: border-color 0.4s ease-out;
+}
+
+.form-add-phrase input[type="text"]:focus {
+  border-color: #6ec1e4;
+  outline: none;
+  box-shadow: 0 0 6px #6ec1e4aa;
+}
+
+.form-add-phrase button {
+  padding: 12px 24px;
+  background-color: #5C98C5DC;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.4s ease-out;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-add-phrase button:hover {
+  background-color: #4a6fa5;
+  box-shadow: 0 4px 12px #4a6fa5;
+}
+
+/* Error mensaje */
+.error-message {
+  color: #e85454;
+  font-size: 0.95rem;
+  margin-top: 6px;
+  width: 100%;
+  font-weight: 600;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  width: 100%;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: 2px solid #c4dbee;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  transition: border-color 0.4s ease-out;
+}
+
+.search-bar:focus {
+  border-color: #6ec1e4;
+  outline: none;
+  box-shadow: 0 0 6px #6ec1e4aa;
+}
+
+/* Grid de cards */
+.phrase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Card individual */
+.phrase-card {
+  background: #fcf9f7; /* muy suave y cálido */
+  border-radius: 16px;
+  padding: 22px 25px;
+  box-shadow: 0 6px 20px rgb(246 173 156 / 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 110px;
+  transition: box-shadow 0.4s ease-out;
+}
+
+.phrase-card:hover {
+  box-shadow: 0 10px 28px rgb(246 173 156 / 0.40);
+}
+
+.phrase-card p {
+  font-size: 1.15rem;
+  margin-bottom: 18px;
+  color: #3a3a3a;
+  overflow-wrap: break-word;
+}
+
+.phrase-card button {
+  align-self: flex-end;
+  background-color: #e85454;
+  border: none;
+  color: white;
+  padding: 9px 18px;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.4s ease-out;
+}
+
+.phrase-card button:hover {
+  background-color: #bf3939;
+  box-shadow: 0 4px 10px #bf3939bb;
+}
+
+/* Mensaje cuando no hay frases */
+.no-phrases-message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  padding: 40px 0;
+}
+
+/* Paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+.pagination button {
+  padding: 8px 14px;
+  border: 2px solid #c4dbee;
+  background: white;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.4s ease-out, border-color 0.4s ease-out;
+}
+
+.pagination button.active {
+  background: #6ec1e4;
+  color: white;
+  border-color: #6ec1e4;
+  box-shadow: 0 4px 10px #6ec1e4bb;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #4a6fa5; /* verde acento */
+  border-color: #4a6fa5;
+  color: white;
+  box-shadow: 0 4px 12px #4a6fa5;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive ajustes */
+@media (max-width: 480px) {
+  .form-add-phrase {
+    flex-direction: column;
+  }
+
+  .form-add-phrase button {
+    width: 100%;
+  }
+}
