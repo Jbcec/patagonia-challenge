@@ -17,7 +17,7 @@ Este proyecto es parte de un challenge de frontend cuyo objetivo es implementar 
 
 src/<br>
 ├── app/ # Configuración de Redux store y slices<br>
-├── components/ # Componentes como PhraseCard, PhraseGrid, Pagination<br>
+├── components/ # Componentes<br>
 ├── tests/ # Tests automatizados<br>
 ├── index.css # Estilos globales<br>
 └── main.jsx # Punto de entrada<br>
