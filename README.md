@@ -53,11 +53,11 @@ npm test
 
 🖥️ Funcionalidades actuales
 
-✅ Mostrar frases en formato de tarjetas
-✅ Filtrar frases por texto
-✅ Paginación para evitar scroll infinito
-✅ Tests unitarios y de integración
-✅ Diseño responsive
+✅ Mostrar frases en formato de tarjetas<br>
+✅ Filtrar frases por texto<br>
+✅ Paginación para evitar scroll infinito<br>
+✅ Tests unitarios y de integración<br>
+✅ Diseño responsive<br>
 
 
 📌 Próximos pasos (TO DO)
