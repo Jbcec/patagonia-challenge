@@ -28,6 +28,10 @@ const PhraseGrid = () => {
     }
   }, [currentPage, totalPages, dispatch])
 
+  if (filteredPhrases.length === 0) {
+    return <p className="error-message"> No se encontraron frases</p>
+  }
+
   return (
     <>
       <div className="phrase-grid">

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
 
-/* Reset básico y tipografía */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,8 +8,8 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f4f8; /* más suave, celeste pastel */
-  color: #3a3a3a; /* gris oscuro */
+  background-color: #f0f4f8;
+  color: #3a3a3a;
   line-height: 1.6;
   min-height: 100vh;
 }
@@ -29,12 +28,12 @@ body {
 h1 {
   text-align: center;
   margin-bottom: 35px;
-  color: #4a6fa5; /* azul suave y acogedor */
+  color: #4a6fa5;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
 }
 
-/* Formulario para agregar frase */
+/* Formulario */
 .form-add-phrase {
   display: flex;
   gap: 10px;
@@ -109,7 +108,7 @@ h1 {
 
 /* Card individual */
 .phrase-card {
-  background: #fcf9f7; /* muy suave y cálido */
+  background: #fcf9f7;
   border-radius: 16px;
   padding: 22px 25px;
   box-shadow: 0 6px 20px rgb(246 173 156 / 0.25);
@@ -148,6 +147,43 @@ h1 {
   box-shadow: 0 4px 10px #bf3939bb;
 }
 
+/* Leer más */
+.read-more {
+  background: 'transparent';
+  border: 'none';
+  color: '#0077ff';
+  cursor: 'pointer';
+  margin-bottom: 8;
+  padding: 0;
+  text-align: 'left';
+  font-weight: 'bold';
+}
+
+/* Copiar Texto*/
+.copy-text {
+  background-color: '#4a6fa5';
+  border: 'none';
+  color: 'white';
+  padding: '8px 12px';
+  border-radius: 6;
+  cursor: 'pointer';
+  font-size: 14;
+  display: 'flex';
+  align-items: 'center';
+  gap: '6px';
+}
+
+/* Eliminar Card*/
+.delete-card {
+  background-color: '#d93025';
+  border: 'none';
+  color: 'white';
+  padding: '8px 16px';
+  border-radius: 6;
+  cursor: 'pointer';
+  font-size: 14;
+}
+
 /* Mensaje cuando no hay frases */
 .no-phrases-message {
   text-align: center;
@@ -182,7 +218,8 @@ h1 {
 }
 
 .pagination button:hover:not(:disabled) {
-  background-color: #4a6fa5; /* verde acento */
+  background-color: #4a6fa5;
+  /* verde acento */
   border-color: #4a6fa5;
   color: white;
   box-shadow: 0 4px 12px #4a6fa5;
@@ -191,6 +228,41 @@ h1 {
 .pagination button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+/*Toast*/
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4a6fa5;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeInOut 2s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 }
 
 /* Responsive ajustes */

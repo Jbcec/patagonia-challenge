@@ -1,12 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { removePhrase } from '../app/phrasesSlice'
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 const MAX_HEIGHT = 100 // px
 
 const PhraseCard = ({ phrase }) => {
   const dispatch = useDispatch()
   const [expanded, setExpanded] = useState(false)
+  const [toastVisible, setToastVisible] = useState(false)
   const textRef = useRef(null)
   const [needsTruncate, setNeedsTruncate] = useState(false)
 
@@ -15,6 +17,10 @@ const PhraseCard = ({ phrase }) => {
       setNeedsTruncate(textRef.current.scrollHeight > MAX_HEIGHT)
     }
   }, [phrase.text])
+
+  // const copyToClipboard = () => {
+  //   navigator.clipboard.writeText ?
+  // }
 
   return (
     <div className="phrase-card">
@@ -48,20 +54,27 @@ const PhraseCard = ({ phrase }) => {
         </button>
       )}
 
-      <button
-        onClick={() => dispatch(removePhrase(phrase.id))}
-        style={{
-          backgroundColor: '#d93025',
-          border: 'none',
-          color: 'white',
-          padding: '8px 16px',
-          borderRadius: 6,
-          cursor: 'pointer',
-          fontSize: 14,
-        }}
-      >
-        Eliminar
-      </button>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 'auto' }}>
+        {/* <button
+          onClick={copyToClipboard}
+          className='copy-text'
+        >
+          <ContentCopyIcon />
+        </button> */}
+
+        <button
+          onClick={() => dispatch(removePhrase(phrase.id))}
+          className='delete-card'
+        >
+          Eliminar
+        </button>
+      </div>
+
+      {toastVisible && (
+        <div className="toast">
+          Texto copiado ✅
+        </div>
+      )}
     </div>
   )
 }
