@@ -20,7 +20,7 @@ src/<br>
 ├── components/ # Componentes<br>
 ├── tests/ # Tests automatizados<br>
 ├── index.css # Estilos globales<br>
-└── main.jsx # Punto de entrada<br>
+└── app.jsx # Punto de entrada<br>
 
 ---
 
